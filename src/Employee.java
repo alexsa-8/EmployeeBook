@@ -1,6 +1,7 @@
 public class Employee {
     String employeeName;
     int department;
+    int id;
     double salary;
 
     public Employee(String employeeName, int department, double salary) {
@@ -14,6 +15,12 @@ public class Employee {
         this.department=department;
         this.salary= new Salaries(salaries).getSalaries();
     }
+
+    public void Id (int id){
+        this.id=id;
+    }
+    public int getId() {return id;}
+    public void setId(int id) {this.id = id;}
 
     public String getEmployeeName() {
         return employeeName;
@@ -40,6 +47,7 @@ public class Employee {
         return "Employee{" +
                 "employeeName='" + employeeName + '\'' +
                 ", department=" + department +
+                ", id=" + id +
                 ", salary=" + salary +
                 '}';
     }

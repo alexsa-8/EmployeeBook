@@ -9,6 +9,12 @@ public class NamesOfEmployees {
         this.patronymic=patronymic;
     }
 
+    public String getLastName() {return lastName;}
+
+    public String getFirstName() {return firstName;}
+
+    public String getPatronymic() {return patronymic;}
+
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
