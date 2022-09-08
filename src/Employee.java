@@ -24,4 +24,8 @@ public class Employee {
                 ". Зарплата: " + salary + " рублей. " +
                 "id сотрудника: " + id;
    }
+
+    public void getSalary(double indexingSalary) {
+
+    }
 }
