@@ -1,18 +1,7 @@
 public class Main {
-    /*public class OrderedObject {
-        private static int nextId=1;
-        private int id=nextId++;
-
-        public int getOrder() {
-            return id;
-        }
-
-        public String toString()
-        {
-            return "OrderedObject-"+id;
-        }*/
 
     public static void main(String[] args) {
+
         Employee Employee1 = new Employee("Иванов", "Иван", "Иванович", 1, 50_000);
         Employee Employee2 = new Employee("Петров", "Петр", "Петрович", 1, 55_000);
         Employee Employee3 = new Employee("Сидоров", "Сидор", "Сидорович", 2, 57_000);
@@ -23,6 +12,7 @@ public class Main {
         Employee Employee8 = new Employee("Сидорова", "Галина", "Петровна", 4, 62_000);
         Employee Employee9 = new Employee("Васечкина", "Дарья", "Сидоровна", 5, 71_000);
         Employee Employee10 = new Employee("Андреева", "Аксана", "Васильевна", 5, 70_000);
+
         Employee[] employees = new Employee[10];
         employees[0] = Employee1;
         employees[1] = Employee2;
@@ -39,6 +29,9 @@ public class Main {
                 System.out.println(employee);
             }
         }
+
+
+
         double[] salaries = new double[10];
         salaries[0] = Employee1.getSalary();
         salaries[1] = Employee2.getSalary();
