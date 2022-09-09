@@ -1,5 +1,8 @@
+import java.util.Scanner;
+
 //import java.util.Arrays;
 public class EmployeeBook {
+    public static double percent;
     private final Employee[] employees;
 
     public EmployeeBook(int size) {
@@ -15,23 +18,26 @@ public class EmployeeBook {
         }
         return false;
     }
+
     public void printAllEmployees() {
         System.out.println("Данные сотрудников: ");
         for (Employee employee : employees) {
             if (employee != null) {
-                System.out.println(employee);
+                System.out.println(employee.toString());
             }
         }
     }
-    public void amountCostsSalary(){
-        double sum=0;
+
+    public void amountCostsSalary() {
+        double sum = 0;
         for (Employee element : employees) {
-            if (element != null){
+            if (element != null) {
                 sum += element.getSalary();
             }
         }
         System.out.println("Сумма затрат на зарплаты в месяц: " + sum + " рублей");
     }
+
     public void isMinimumSalary() {
         int minSalary = (int) employees[0].getSalary();
         Employee employeeWithMinSalary = employees[0];
@@ -45,6 +51,7 @@ public class EmployeeBook {
             System.out.println("Сотрудник с минимальной зарплатой: " + employeeWithMinSalary.getEmployeeName());
         }
     }
+
     public void isMaximumSalary() {
         int maxSalary = 0;
         Employee employeeWithMaxSalary = null;
@@ -58,31 +65,60 @@ public class EmployeeBook {
             System.out.println("Сотрудник с максимальной зарплатой: " + employeeWithMaxSalary.getEmployeeName());
         }
     }
-    public void averageSalary(){
-        double sum=0;
+
+    public void averageSalary() {
+        double sum = 0;
         for (Employee element : employees) {
-            if (element != null){
+            if (element != null) {
                 sum += element.getSalary();
             }
         }
-        double averageSalary=sum/employees.length;
-        System.out.println("Среднее значение зарплат: "+averageSalary+" рублей");
+        double averageSalary = sum / employees.length;
+        System.out.println("Среднее значение зарплат: " + averageSalary + " рублей");
     }
-    public void listEmployees(){
+
+    public void listEmployees() {
         System.out.println("Список Ф. И. О. всех сотрудников: ");
         for (Employee employee : employees) {
-            if (employee != null){
+            if (employee != null) {
                 System.out.println(employee.getEmployeeName());
             }
         }
     }
-    public void indexingSalary(double percent){
-        for (Employee employee : employees){
+
+//    public void indexingSalary(double percent) {
+//        Scanner input = new Scanner(System.in);
+//        System.out.print("Введите процент индексирования зарплат: ");
+//        percent = input.nextDouble();
+//        for (Employee employee : employees) {
+//            if (employee != null) {
+//                double indexingSalary = (employee.getSalary() * (percent / 100) + employee.getSalary());
+//                employee.getSalary();
+//                System.out.println("Было:" + employee.getSalary() + "стало: " + indexingSalary);
+//
+//            }
+//
+//        }
+//
+//    }
+
+    public void indexingSalary() {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Введите процент индексирования зарплат: ");
+        double percent = input.nextDouble();
+        for (Employee employee : employees) {
             if (employee != null) {
-                double indexingSalary=(employee.getSalary()*percent+employee.getSalary());
-                employee.getSalary(indexingSalary);
+                double indexingSalary = (employee.getSalary() * (percent / 100) + employee.getSalary());
+                System.out.println("Было:" + employee.getSalary() + " руб. стало: " + indexingSalary + " руб.");
             }
         }
     }
 
+    public void numbersDepartment() {
+        for (Employee employee : employees) {
+            if (employee != null) {
+                System.out.println(employee.getEmployeeName() + " работает в " + employee.getDepartment() + " отделе.");
+            }
+        }
+    }
 }

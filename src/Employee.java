@@ -1,8 +1,8 @@
 public class Employee {
-    String employeeName;
-    int department;
-    double salary;
-    int counter=1;
+    private final String employeeName;
+    private int department;
+    private double salary;
+    private static int counter=1;
     int id;
     public Employee(String lastName, String firstName, String patronymic, int department, double salaries){
         this.employeeName= String.valueOf(new NamesOfEmployees(lastName, firstName, patronymic));
@@ -25,7 +25,8 @@ public class Employee {
                 "id сотрудника: " + id;
    }
 
-    public void getSalary(double indexingSalary) {
-
-    }
+//    public boolean getSalary(double indexingSalary) {
+//        indexingSalary=(getSalary()*(EmployeeBook.percent/100)+getSalary());
+//        return indexingSalary;
+//    }
 }

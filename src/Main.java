@@ -1,3 +1,4 @@
+
 public class Main {
 
     public static <employees> void main(String[] args) {
@@ -13,10 +14,13 @@ public class Main {
         book.add(new Employee("Васечкина", "Дарья", "Сидоровна", 5, 71_000));
         book.add(new Employee("Андреева", "Аксана", "Васильевна", 5, 70_000));
 
+        book.printAllEmployees();
         book.amountCostsSalary();
         book.isMinimumSalary();
         book.isMaximumSalary();
         book.averageSalary();
         book.listEmployees();
+        book.indexingSalary();
+        book.numbersDepartment();
     }
 }
