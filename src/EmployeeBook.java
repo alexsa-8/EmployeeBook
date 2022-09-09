@@ -1,6 +1,5 @@
 import java.util.Scanner;
 
-//import java.util.Arrays;
 public class EmployeeBook {
     public static double percent;
     private final Employee[] employees;
@@ -85,22 +84,6 @@ public class EmployeeBook {
             }
         }
     }
-
-//    public void indexingSalary(double percent) {
-//        Scanner input = new Scanner(System.in);
-//        System.out.print("Введите процент индексирования зарплат: ");
-//        percent = input.nextDouble();
-//        for (Employee employee : employees) {
-//            if (employee != null) {
-//                double indexingSalary = (employee.getSalary() * (percent / 100) + employee.getSalary());
-//                employee.getSalary();
-//                System.out.println("Было:" + employee.getSalary() + "стало: " + indexingSalary);
-//
-//            }
-//
-//        }
-//
-//    }
 
     public void indexingSalary() {
         Scanner input = new Scanner(System.in);

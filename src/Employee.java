@@ -24,9 +24,4 @@ public class Employee {
                 ". Зарплата: " + salary + " рублей. " +
                 "id сотрудника: " + id;
    }
-
-//    public boolean getSalary(double indexingSalary) {
-//        indexingSalary=(getSalary()*(EmployeeBook.percent/100)+getSalary());
-//        return indexingSalary;
-//    }
 }
