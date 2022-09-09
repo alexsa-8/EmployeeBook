@@ -29,10 +29,8 @@ public class NamesOfEmployees {
 
     @Override
     public String toString() {
-        return "NamesOfEmployees{" +
-                "lastName='" + lastName + '\'' +
-                ", firstName='" + firstName + '\'' +
-                ", patronymic='" + patronymic + '\'' +
-                '}';
+        return " " + lastName +
+                " " + firstName +
+                " " + patronymic;
     }
 }

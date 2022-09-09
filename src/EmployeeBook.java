@@ -104,4 +104,39 @@ public class EmployeeBook {
             }
         }
     }
+
+    public void printEmployeeMinimumSalary(){
+        for (Employee employee : employees) {
+            for (Employee value : employees) {
+                if (employee.getDepartment() == value.getDepartment() && employee.getSalary() < value.getSalary()) {
+                    System.out.println("Сотрудник: " + employee.getEmployeeName() + " из отдела №" + employee.getDepartment() +
+                            " с минимальной зарплатой " + employee.getSalary() + " руб.");
+                }
+            }
+        }
+    }
+    public void printEmployeeMaximumSalary(){
+        for (Employee employee : employees) {
+            for (Employee value : employees) {
+                if (employee.getDepartment() == value.getDepartment() && employee.getSalary() > value.getSalary()) {
+                    System.out.println("Сотрудник: " + employee.getEmployeeName() + " из отдела №" + employee.getDepartment() +
+                            " с максимальной зарплатой " + employee.getSalary() + " руб.");
+                }
+            }
+        }
+    }
+
+   /* public void amountOfSalaryCostsByDepartment(){
+        for (Employee employee : employees) {
+            double costAmount=0;
+            costAmount=employee.getSalary();
+            for (int i=1; i<6;i++) {
+                if (employee.getDepartment() == i && employee.getEmployeeName()!= employees[i-1].getEmployeeName()) {
+                    costAmount+=employees[i-1].getSalary();
+
+                    System.out.println("Сумма затрат на зарплату в отделе №"+employee.getDepartment()+" = " + costAmount + " руб.");
+                }
+            }
+        }
+    }*/
 }
