@@ -24,6 +24,6 @@ public class Main {
         book.numbersDepartment();
         book.printEmployeeMinimumSalary();
         book.printEmployeeMaximumSalary();
-        //book.amountOfSalaryCostsByDepartment();
+        book.amountOfSalaryCostsByDepartment();
     }
 }

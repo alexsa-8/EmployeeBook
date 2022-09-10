@@ -105,7 +105,7 @@ public class EmployeeBook {
         }
     }
 
-    public void printEmployeeMinimumSalary(){
+    public void printEmployeeMinimumSalary() {
         for (Employee employee : employees) {
             for (Employee value : employees) {
                 if (employee.getDepartment() == value.getDepartment() && employee.getSalary() < value.getSalary()) {
@@ -115,7 +115,8 @@ public class EmployeeBook {
             }
         }
     }
-    public void printEmployeeMaximumSalary(){
+
+    public void printEmployeeMaximumSalary() {
         for (Employee employee : employees) {
             for (Employee value : employees) {
                 if (employee.getDepartment() == value.getDepartment() && employee.getSalary() > value.getSalary()) {
@@ -126,17 +127,15 @@ public class EmployeeBook {
         }
     }
 
-   /* public void amountOfSalaryCostsByDepartment(){
-        for (Employee employee : employees) {
-            double costAmount=0;
-            costAmount=employee.getSalary();
-            for (int i=1; i<6;i++) {
-                if (employee.getDepartment() == i && employee.getEmployeeName()!= employees[i-1].getEmployeeName()) {
-                    costAmount+=employees[i-1].getSalary();
-
-                    System.out.println("Сумма затрат на зарплату в отделе №"+employee.getDepartment()+" = " + costAmount + " руб.");
+    public void amountOfSalaryCostsByDepartment() {
+        double costAmount;
+        for (int i = 1; i < 6; i++) {
+            costAmount = 0;
+            for (Employee employee : employees)
+                if (employee.getDepartment() == i) {
+                    costAmount += employee.getSalary();
                 }
-            }
+            System.out.println("Сумма затрат на зарплату в отделе №" + employees[i].getDepartment() + " = " + costAmount + " руб.");
         }
-    }*/
+    }
 }
