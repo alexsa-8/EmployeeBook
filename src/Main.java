@@ -25,5 +25,10 @@ public class Main {
         book.printEmployeeMinimumSalary();
         book.printEmployeeMaximumSalary();
         book.amountOfSalaryCostsByDepartment();
+        book.averageSalaryByDepartment();
+        book.indexDepartmentSalaryPercentage();
+        book.workEmployeesDepartment();
+        book.earnLessNumber();
+        book.earnMoreNumber();
     }
 }
