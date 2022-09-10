@@ -8,11 +8,11 @@ public class Main {
         book.add(new Employee("Сидоров", "Сидор", "Сидорович", 2, 57_000));
         book.add(new Employee("Васечкин", "Василий", "Васильевич", 2, 59_000));
         book.add(new Employee("Андреев", "Андрей", "Андреевич", 3, 65_000));
-        book.add(new Employee("Иванова", "Ольга", "Ардреевна", 3, 67_000));
+        book.add(new Employee("Иванова", "Ольга", "Андреевна", 3, 67_000));
         book.add(new Employee("Петрова", "Наталья", "Ивановна", 4, 59_000));
         book.add(new Employee("Сидорова", "Галина", "Петровна", 4, 62_000));
         book.add(new Employee("Васечкина", "Дарья", "Сидоровна", 5, 71_000));
-        book.add(new Employee("Андреева", "Аксана", "Васильевна", 5, 70_000));
+        book.add(new Employee("Андреева", "Оксана", "Васильевна", 5, 70_000));
 
         book.printAllEmployees();
         book.amountCostsSalary();

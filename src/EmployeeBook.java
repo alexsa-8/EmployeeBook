@@ -167,7 +167,7 @@ public class EmployeeBook {
     }
     public void workEmployeesDepartment(){
         Scanner input = new Scanner(System.in);
-        System.out.print("Дааные сотрудников кокого отдела вывести? Ведите номер отделения от 1 до 5 включительно: ");
+        System.out.print("Данные сотрудников кокого отдела вывести? Ведите номер отделения от 1 до 5 включительно: ");
         int departmentNumber = input.nextInt();
         for (Employee employee : employees) {
             if (employee != null && employee.getDepartment() == departmentNumber) {
@@ -177,7 +177,7 @@ public class EmployeeBook {
     }
     public void earnLessNumber(){
         Scanner input = new Scanner(System.in);
-        System.out.print("Ведите размер зарплаты, вы увидите сотрудников которые получают меньше указанного числа: ");
+        System.out.print("Введите размер зарплаты, вы увидите сотрудников которые получают меньше указанного числа: ");
         double salaryNumber=input.nextDouble();
         for (Employee employee : employees) {
             if (employee != null && employee.getSalary() < salaryNumber){
@@ -187,7 +187,7 @@ public class EmployeeBook {
     }
     public void earnMoreNumber(){
         Scanner input = new Scanner(System.in);
-        System.out.print("Ведите размер зарплаты, вы увидите сотрудников которые получают столько или больше указанного числа: ");
+        System.out.print("Введите размер зарплаты, вы увидите сотрудников которые получают столько или больше указанного числа: ");
         double salaryNumber=input.nextDouble();
         for (Employee employee : employees) {
             if (employee != null && employee.getSalary() >= salaryNumber){
