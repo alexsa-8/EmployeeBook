@@ -3,11 +3,11 @@ public class Employee {
     private int department;
     private double salary;
     private static int counter=1;
-    int id;
+    private final int id;
     public Employee(String lastName, String firstName, String patronymic, int department, double salaries){
         this.employeeName= String.valueOf(new NamesOfEmployees(lastName, firstName, patronymic));
         this.department=department;
-        this.salary= new Salaries(salaries).getSalaries();
+        this.salary= salaries;
         this.id=counter++;
     }
     public int getId() {return id;}

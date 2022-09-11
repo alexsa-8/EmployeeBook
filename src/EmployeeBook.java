@@ -1,7 +1,8 @@
+//import jdk.internal.jimage.ImageStrings;
+import java.lang.*;
 import java.util.Scanner;
 
 public class EmployeeBook {
-    public static double percent;
     private final Employee[] employees;
 
     public EmployeeBook(int size) {
@@ -21,7 +22,7 @@ public class EmployeeBook {
         System.out.println("Данные сотрудников: ");
         for (Employee employee : employees) {
             if (employee != null) {
-                System.out.println(employee.toString());
+                System.out.println(employee);
             }
         }
     }
@@ -161,7 +162,6 @@ public class EmployeeBook {
             if (employee != null && employee.getDepartment() == departmentNumber) {
                 indexedSalary = employee.getSalary() * percent / 100 + employee.getSalary();
                 System.out.println(employee.getEmployeeName() + " " + indexedSalary + " руб.");
-                //indexedSalary = 0;
             }
         }
     }
@@ -195,5 +195,15 @@ public class EmployeeBook {
             }
         }
     }
+    /*public void addNewEmployee(){
+        for (Employee employee : employees) {
+            if (employee == null) {
+                employee = new Employee("Васильев", "Иван", "Степанович", 5, 70_000);
+                return;
+                //System.out.println(employee.toString());
+            }
+        }
+        //EmployeeBook book
+    }*/
 
 }

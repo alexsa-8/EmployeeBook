@@ -1,7 +1,7 @@
 
 public class Main {
 
-    public static <employees> void main(String[] args) {
+    public static void main(String[] args) {
         EmployeeBook book = new EmployeeBook(10);
         book.add(new Employee("Иванов", "Иван", "Иванович", 1, 50_000));
         book.add(new Employee("Петров", "Петр", "Петрович", 1, 55_000));
@@ -13,6 +13,7 @@ public class Main {
         book.add(new Employee("Сидорова", "Галина", "Петровна", 4, 62_000));
         book.add(new Employee("Васечкина", "Дарья", "Сидоровна", 5, 71_000));
         book.add(new Employee("Андреева", "Оксана", "Васильевна", 5, 70_000));
+        book.add(new Employee("Андреевас", "Оксана", "Васильевна", 5, 70_000));
 
         book.printAllEmployees();
         book.amountCostsSalary();
@@ -30,5 +31,6 @@ public class Main {
         book.workEmployeesDepartment();
         book.earnLessNumber();
         book.earnMoreNumber();
+        //book.addNewEmployee();
     }
 }
