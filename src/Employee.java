@@ -2,7 +2,7 @@ public class Employee {
     private final String employeeName;
     private int department;
     private double salary;
-    private static int counter=1;
+    private static int counter=0;
     private final int id;
     public Employee(String lastName, String firstName, String patronymic, int department, double salaries){
         this.employeeName= String.valueOf(new NamesOfEmployees(lastName, firstName, patronymic));
@@ -13,9 +13,11 @@ public class Employee {
     public int getId() {return id;}
     public String getEmployeeName() {return employeeName;}
     public int getDepartment() {return department;}
-    public void setDepartment(int department) {this.department = department;}
+    public void setDepartment(int department) {this.department = department;
+    }
     public double getSalary() {return salary;}
-    public void setSalary(double salary) {this.salary = salary;}
+    public void setSalary(double salary) {this.salary = salary;
+    }
 
     @Override
     public String toString() {

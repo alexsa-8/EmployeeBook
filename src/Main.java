@@ -13,7 +13,7 @@ public class Main {
         book.add(new Employee("Сидорова", "Галина", "Петровна", 4, 62_000));
         book.add(new Employee("Васечкина", "Дарья", "Сидоровна", 5, 71_000));
         book.add(new Employee("Андреева", "Оксана", "Васильевна", 5, 70_000));
-        book.add(new Employee("Андреевас", "Оксана", "Васильевна", 5, 70_000));
+        //book.add(new Employee("Васильев", "Александр", "Юрьевич", 3, 69_000));
 
         book.printAllEmployees();
         book.amountCostsSalary();
@@ -31,6 +31,8 @@ public class Main {
         book.workEmployeesDepartment();
         book.earnLessNumber();
         book.earnMoreNumber();
-        //book.addNewEmployee();
+        book.deleteAnEmployee(0);
+        book.addNewEmployee();
+        book.changeAnEmployee(75000,5);
     }
 }
