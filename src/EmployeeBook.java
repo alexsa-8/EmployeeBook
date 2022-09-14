@@ -1,5 +1,4 @@
 import java.lang.*;
-
 import java.util.Scanner;
 
 public class EmployeeBook {
@@ -185,7 +184,8 @@ public class EmployeeBook {
         int departmentNumber = input.nextInt();
         for (Employee employee : employees) {
             if (employee != null && employee.getDepartment() == departmentNumber) {
-                System.out.println(employee.getEmployeeName() + " з/п " + employee.getSalary() + " руб. id-" + employee.getId());
+                System.out.println(employee.getEmployeeName() +
+                        " з/п " + employee.getSalary() + " руб. id-" + employee.getId());
             }
         }
     }
@@ -196,7 +196,8 @@ public class EmployeeBook {
         double salaryNumber = input.nextDouble();
         for (Employee employee : employees) {
             if (employee != null && employee.getSalary() < salaryNumber) {
-                System.out.println(employee.getEmployeeName() + " з/п " + employee.getSalary() + " руб. id-" + employee.getId());
+                System.out.println(employee.getEmployeeName() + " з/п " + employee.getSalary() +
+                        " руб. id-" + employee.getId());
             }
         }
     }
@@ -207,7 +208,8 @@ public class EmployeeBook {
         double salaryNumber = input.nextDouble();
         for (Employee employee : employees) {
             if (employee != null && employee.getSalary() >= salaryNumber) {
-                System.out.println(employee.getEmployeeName() + " з/п " + employee.getSalary() + " руб. id-" + employee.getId());
+                System.out.println(employee.getEmployeeName() + " з/п " + employee.getSalary() +
+                        " руб. id-" + employee.getId());
             }
         }
     }
@@ -223,26 +225,38 @@ public class EmployeeBook {
     }
 
     public void addNewEmployee() {
-        for (int j = 0; j < employees.length; j++) {
-            if (employees[j] == null) {
-                employees[j] = new Employee("Васильев",
+        for (int i = 0; i < employees.length; i++) {
+            if (employees[i] == null) {
+                employees[i] = new Employee("Васильев",
                         "Иван", "Степанович",
                         5, 75_000);
-                System.out.println("Новый сотрудник :\n" + employees[j]);
+                System.out.println("Новый сотрудник :\n" + employees[i]);
                 return;
             }
         }
     }
-    public void changeAnEmployee(double salary, int department){
-        Scanner input=new Scanner(System.in);
+
+    public void changeAnEmployee(double salary, int department) {
+        Scanner input = new Scanner(System.in);
         System.out.print("Введите id сотрудника для изменения его зарплаты и отдела: ");
-        int id=input.nextInt();
+        int id = input.nextInt();
         for (Employee employee : employees) {
-            if (employee != null && employee.getId()==id){
+            if (employee != null && employee.getId() == id) {
                 employee.setSalary(salary);
                 employee.setDepartment(department);
-                System.out.println("Новая зарплата = "+employee.getSalary()+" руб.");
-                System.out.println("Новый отдел №"+employee.getDepartment());
+                System.out.println("Новая зарплата = " + employee.getSalary() + " руб.");
+                System.out.println("Новый отдел №" + employee.getDepartment());
+            }
+        }
+    }
+
+    public void getNameEmployeesDepartment(){
+        for (int i = 1; i < 6; i++) {
+            System.out.println("Сотрудники отдела №"+i+" :");
+            for (Employee employee : employees) {
+                if (employee != null && employee.getDepartment()==i) {
+                    System.out.println(employee.getEmployeeName());
+                }
             }
         }
     }
