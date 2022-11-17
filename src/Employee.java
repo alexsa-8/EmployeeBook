@@ -26,4 +26,8 @@ public class Employee {
                 ". Зарплата: " + salary + " рублей. " +
                 "id сотрудника: " + id;
    }
+
+    public String substring(int i, int i1) {
+        return null;
+    }
 }

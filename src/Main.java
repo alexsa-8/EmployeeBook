@@ -3,8 +3,8 @@ public class Main {
 
     public static void main(String[] args) {
         EmployeeBook book = new EmployeeBook(10);
-        book.add(new Employee("Иванов", "Иван", "Иванович", 1, 50_000));
-        book.add(new Employee("Петров", "Петр", "Петрович", 1, 55_000));
+        book.add(new Employee(" 1иван0ов", " 52иван  ", "иванович", 1, 50_000));
+        book.add(new Employee(" петров", "Петр", "Петрович", 1, 55_000));
         book.add(new Employee("Сидоров", "Сидор", "Сидорович", 2, 57_000));
         book.add(new Employee("Васечкин", "Василий", "Васильевич", 2, 59_000));
         book.add(new Employee("Андреев", "Андрей", "Андреевич", 3, 65_000));

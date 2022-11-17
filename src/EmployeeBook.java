@@ -18,6 +18,7 @@ public class EmployeeBook {
         return false;
     }
 
+
     public void printAllEmployees() {
         System.out.println("Данные сотрудников: ");
         for (Employee employee : employees) {
